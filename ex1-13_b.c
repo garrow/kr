@@ -60,12 +60,19 @@ int main() {
   }
   printf("maxfreq :%u\n",maxfreq); 
   printf("maxword :%u\n",maxword); 
+
   int row;
   int column;
   for ( row = maxfreq ; row > 0; row-- ) {
-    for ( column = 0; column < maxword ; column++ ){
-      putchar( (wordLen[column] == row ) ? '#' : '_'); 
+    for ( column = 0; column <= maxword ; column++ ){
+      if (wordLen[column] == row) {
+        putchar('#');
+      } else {
+        putchar(' ');
+      }
     
+      putchar( (wordLen[column] == row ) ? '#' : '_'); 
+     // printf("row: %u col: %u : value: %u\n", row, column, wordLen[column]); 
     }
     putchar('\n');
 
