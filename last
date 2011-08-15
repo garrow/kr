@@ -1,0 +1,4 @@
+#!/bin/bash
+LAST_C_FILE=`ls -1t *.c| head -n 1 `
+echo "Compiling $LAST_C_FILE"
+gcc $LAST_C_FILE
